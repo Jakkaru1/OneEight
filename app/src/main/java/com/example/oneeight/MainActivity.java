@@ -12,17 +12,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     //Variables
-    boolean[] pole = new boolean[9];
-    private Button one;
-    private Button two;
-    private Button three;
-    private Button four;
-    private Button five;
-    private Button six;
-    private Button seven;
-    private Button eight;
-    private Button nine;
-    private Button reroll;
+    boolean[] pole = new boolean[10];
+    Button[] poleButtons = new Button[10];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,30 +21,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Init of variables
-        /*for(int i = 0; i < pole.length; i++){
-            pole[i] = (Math.random() < 0.5);
-        };*/
-        one = (Button) findViewById(R.id.one);
-        one.setOnClickListener(onClickListener);
-        two = (Button) findViewById(R.id.two);
-        two.setOnClickListener(onClickListener);
-        three = (Button) findViewById(R.id.three);
-        three.setOnClickListener(onClickListener);
-        four = (Button) findViewById(R.id.four);
-        four.setOnClickListener(onClickListener);
-        five = (Button) findViewById(R.id.five);
-        five.setOnClickListener(onClickListener);
-        six = (Button) findViewById(R.id.six);
-        six.setOnClickListener(onClickListener);
-        seven = (Button) findViewById(R.id.seven);
-        seven.setOnClickListener(onClickListener);
-        eight = (Button) findViewById(R.id.eight);
-        eight.setOnClickListener(onClickListener);
-        nine = (Button) findViewById(R.id.nine);
-        nine.setOnClickListener(onClickListener);
-        reroll = (Button) findViewById(R.id.reroll);
-        reroll.setOnClickListener(onClickListener);
+        poleButtons[0] = (Button) findViewById(R.id.reroll);
+        poleButtons[1] = (Button) findViewById(R.id.one);
+        poleButtons[2] = (Button) findViewById(R.id.two);
+        poleButtons[3] = (Button) findViewById(R.id.three);
+        poleButtons[4] = (Button) findViewById(R.id.four);
+        poleButtons[5] = (Button) findViewById(R.id.five);
+        poleButtons[6] = (Button) findViewById(R.id.six);
+        poleButtons[7] = (Button) findViewById(R.id.seven);
+        poleButtons[8] = (Button) findViewById(R.id.eight);
+        poleButtons[9] = (Button) findViewById(R.id.nine);
 
+        for(int i = 0; i < pole.length; i++){
+            pole[i] = (Math.random() < 0.5);
+            poleButtons[i].setOnClickListener(onClickListener);
+        }
 
         rerollClick();
         /* kontrola random boolean
@@ -65,24 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
     //Metoda na rerollnutie buttonov
     private void rerollClick(){
-        pole[0] = (Math.random() < 0.5);
-        if(pole[0]){one.setBackgroundColor(Color.BLACK);}else{one.setBackgroundColor(Color.WHITE);};
-        pole[1] = (Math.random() < 0.5);
-        if(pole[1]){two.setBackgroundColor(Color.BLACK);}else{two.setBackgroundColor(Color.WHITE);};
-        pole[2] = (Math.random() < 0.5);
-        if(pole[2]){three.setBackgroundColor(Color.BLACK);}else{three.setBackgroundColor(Color.WHITE);};
-        pole[3] = (Math.random() < 0.5);
-        if(pole[3]){four.setBackgroundColor(Color.BLACK);}else{four.setBackgroundColor(Color.WHITE);};
-        pole[4] = (Math.random() < 0.5);
-        if(pole[4]){five.setBackgroundColor(Color.BLACK);}else{five.setBackgroundColor(Color.WHITE);};
-        pole[5] = (Math.random() < 0.5);
-        if(pole[5]){six.setBackgroundColor(Color.BLACK);}else{six.setBackgroundColor(Color.WHITE);};
-        pole[6] = (Math.random() < 0.5);
-        if(pole[6]){seven.setBackgroundColor(Color.BLACK);}else{seven.setBackgroundColor(Color.WHITE);};
-        pole[7] = (Math.random() < 0.5);
-        if(pole[7]){eight.setBackgroundColor(Color.BLACK);}else{eight.setBackgroundColor(Color.WHITE);};
-        pole[8] = (Math.random() < 0.5);
-        if(pole[8]){nine.setBackgroundColor(Color.BLACK);}else{nine.setBackgroundColor(Color.WHITE);};
+        for(int i = 0; i < pole.length; i++){
+            pole[i] = (Math.random() < 0.5);
+            if(pole[i]){poleButtons[i].setBackgroundColor(Color.BLACK);}else{poleButtons[i].setBackgroundColor(Color.WHITE);}
+        }
     }
 
     //Metoda na klikanie buttonov
