@@ -81,25 +81,22 @@ public class MainActivity extends AppCompatActivity {
                     if(poleButton[i][j].getId() == v.getId()){
                         x = i;
                         y = j;
-
-                        
-
                         break;
                     }
 
                 }
             }
         try{
-            changeColor(x++, y);
+            changeColor(x + 1, y);
         }catch(IndexOutOfBoundsException e){}
         try{
-            changeColor(x, y++);
+            changeColor(x, y + 1);
         }catch(IndexOutOfBoundsException e){}
         try{
-            changeColor(x--, y);
+            changeColor(x - 1, y);
         }catch(IndexOutOfBoundsException e){}
         try{
-            changeColor(x, y--);
+            changeColor(x, y - 1);
         }catch(IndexOutOfBoundsException e){}
     }
 }
