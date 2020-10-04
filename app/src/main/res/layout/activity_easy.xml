@@ -4,20 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="All Black"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:background="#245678"
+    tools:context=".easy">
 
     <Button
         android:id="@+id/one"
@@ -27,6 +15,8 @@
         android:layout_marginTop="24dp"
         android:background="#000000"
         android:onClick="buttonClick"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topSpace" />
 
@@ -38,6 +28,8 @@
         android:layout_marginEnd="40dp"
         android:background="#000000"
         android:onClick="buttonClick"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topSpace" />
 
@@ -48,6 +40,8 @@
         android:layout_marginStart="40dp"
         android:background="#000000"
         android:onClick="buttonClick"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/seven"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/one"
@@ -61,6 +55,8 @@
         android:layout_marginBottom="24dp"
         android:background="#000000"
         android:onClick="buttonClick"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/botSpace"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -70,12 +66,14 @@
         android:layout_height="100dp"
         android:background="#000000"
         android:onClick="buttonClick"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/eight"
         app:layout_constraintEnd_toStartOf="@+id/six"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toEndOf="@+id/four"
         app:layout_constraintTop_toBottomOf="@+id/two"
-        app:layout_constraintVertical_bias="0.488" />
+        app:layout_constraintVertical_bias="0.515" />
 
     <Button
         android:id="@+id/six"
@@ -84,10 +82,12 @@
         android:layout_marginEnd="40dp"
         android:background="#000000"
         android:onClick="buttonClick"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/nine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/three"
-        app:layout_constraintVertical_bias="0.511" />
+        app:layout_constraintVertical_bias="0.515" />
 
     <Button
         android:id="@+id/eight"
@@ -96,6 +96,8 @@
         android:layout_marginBottom="24dp"
         android:background="#000000"
         android:onClick="buttonClick"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/botSpace"
         app:layout_constraintEnd_toStartOf="@+id/nine"
         app:layout_constraintHorizontal_bias="0.516"
@@ -109,6 +111,8 @@
         android:layout_marginBottom="24dp"
         android:background="#000000"
         android:onClick="buttonClick"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/botSpace"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -119,6 +123,8 @@
         android:layout_marginTop="24dp"
         android:background="#000000"
         android:onClick="buttonClick"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
         app:layout_constraintEnd_toStartOf="@+id/three"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toEndOf="@+id/one"
@@ -126,11 +132,16 @@
 
     <Button
         android:id="@+id/reroll"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="239dp"
         android:layout_height="94dp"
         android:layout_marginBottom="40dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#2B3333"
         android:onClick="rerollClick"
         android:text="REROLL!"
+        android:textColor="#245678"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -139,10 +150,10 @@
         android:id="@+id/botSpace"
         android:layout_width="0dp"
         android:layout_height="10dp"
-        android:layout_marginBottom="201dp"
+        android:layout_marginBottom="255dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -151,21 +162,23 @@
         android:layout_height="42dp"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="#000000"
+        android:textColor="#2B3333"
         android:textIsSelectable="false"
-        android:textSize="38dp"
+        android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/reroll"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botSpace" />
+        app:layout_constraintTop_toBottomOf="@+id/botSpace"
+        app:layout_constraintVertical_bias="0.361" />
 
     <Space
         android:id="@+id/topSpace"
         android:layout_width="0dp"
         android:layout_height="10dp"
-        android:layout_marginTop="114dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
