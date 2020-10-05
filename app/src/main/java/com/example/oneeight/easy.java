@@ -37,12 +37,12 @@ public class easy extends AppCompatActivity {
         poleButton[2][1] = (Button) findViewById(R.id.eight);
         poleButton[2][2] = (Button) findViewById(R.id.nine);
         endText = (TextView)findViewById(R.id.endText);
-        reroll();
+        refresh();
 
     }
 
     //Metoda na rerollnutie buttonov
-    private void reroll() {
+    private void refresh() {
         for (int i = 0; i < 3; i++) {
             for(int j = 0; j < 3; j++) {
                 poleBoolean[i][j] = (Math.random() < 0.5);
@@ -76,9 +76,12 @@ public class easy extends AppCompatActivity {
         if(black == 9){endText.setText("WIN!");}else{endText.setText(" ");}
         if(white == 9){endText.setText("WIN!");}else{endText.setText(" ");}
     }
-    //rerolne
-    public void rerollClick(View v){
-        reroll();
+    //Refreshne
+    public void refreshClick(View v){
+        black = 0;
+        white = 0;
+        winCondition();
+        refresh();
     }
 
     //Metoda na menenie farieb buttonov
